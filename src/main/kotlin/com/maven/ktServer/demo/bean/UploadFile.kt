@@ -1,19 +1,17 @@
 package com.maven.ktServer.demo.bean
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
-@Entity
-data class UploadFile(
-    val oldFileName: String,
-    val fileType: String, val fileSize: String, val savePath: String,
-    val saveTime: String, val desc: String, val saveName: String
-) {
-
-
+@Entity(name = "uploadfiles")
+ data class UploadFile(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    val id: Long = 0
-}
+    val id: Long=0,
+    val oldFileName: String="",
+    val fileType: String="",
+    val fileSize: String="",
+    val savePath: String="",
+    val saveTime: String="",
+    val descs: String="",
+    val saveName: String=""
+)
