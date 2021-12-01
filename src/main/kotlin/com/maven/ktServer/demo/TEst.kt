@@ -6,7 +6,7 @@ class TEst {
     fun main() {
         var add = fun(): () -> Int {
             var counter = 0
-            return  {
+            return {
                 counter += 1
                 counter
             }
@@ -14,5 +14,13 @@ class TEst {
         add()
         add()
         add()
+    }
+
+    suspend fun getData(str: String?): String {
+        return if (!str.isNullOrEmpty()) {
+            str
+        } else {
+            getData("s")
+        }
     }
 }
