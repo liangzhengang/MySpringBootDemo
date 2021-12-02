@@ -2,7 +2,7 @@ package com.maven.ktServer.demo.bean
 
 import javax.persistence.*
 
-@Entity(name = "uploadfiles")
+@Entity
  data class UploadFile(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
